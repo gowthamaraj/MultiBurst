@@ -1,0 +1,37 @@
+# Ignore environment variables file for security reasons
+.env 
+.DS_Store
+
+# Ignore Python cache files for cleaner repository
+*/__pycache__ 
+
+# Ignore Terraform files to prevent accidental commit of sensitive data
+*/.terraform/ 
+terraform/.* 
+terraform/terraform* 
+terraform/*.tf 
+
+# Ignore keys to prevent accidental commit of sensitive data
+keys/ 
+
+# Ignore VS Code settings for cleaner repository
+.vscode/ 
+
+# Ignore Ansible inventory file to prevent accidental commit of sensitive data
+ansible/inventory.ini 
+
+# Ignore Poetry lock file to prevent version conflicts
+poetry.lock 
+
+# Ignore output files for cleaner repository
+output/ 
+
+# Ignore logs for cleaner repository
+logs/ 
+
+# Ignore wordlists to prevent accidental commit of large files
+wordlists/ 
+
+# Ignore configuration file to prevent accidental commit of sensitive data
+multiburst.yaml 
+

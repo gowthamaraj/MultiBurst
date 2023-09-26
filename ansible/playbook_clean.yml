@@ -1,0 +1,13 @@
+---
+- name: clean the output files in the remote nodes
+  hosts: droplets
+  gather_facts: no
+  tasks:
+  - name: Remove the output directory
+    ansible.builtin.file:
+      path: /root/output
+      state: absent
+  - name: Remove the input file
+    ansible.builtin.file:
+      path: /root/input.txt
+      state: absent

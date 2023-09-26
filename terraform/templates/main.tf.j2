@@ -1,0 +1,24 @@
+provider "digitalocean" {
+  token = "{{ do_token }}"
+}
+
+resource "digitalocean_ssh_key" "key" {
+  name       = "key"
+  public_key = file("../keys/id_rsa.pub")
+}
+
+resource "digitalocean_vpc" "web" {
+  name     = "multiburst-vpc"
+  region   = "nyc3"
+  ip_range = "10.10.10.0/24"
+}
+
+resource "digitalocean_droplet" "web" {
+  count  = {{ droplet_count }}
+  image  = "{{ image }}"
+  name   = "web-${count.index}"
+  region = "{{ region }}"
+  size   = "{{ size }}"
+  vpc_uuid = digitalocean_vpc.web.id
+  ssh_keys = [digitalocean_ssh_key.key.id]
+}

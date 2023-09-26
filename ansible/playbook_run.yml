@@ -1,0 +1,26 @@
+---
+- name: Run module <feroxbuster>
+  hosts: droplets
+  gather_facts: no
+  tasks:
+  - name: Create a directory if it does not exist ('output')
+    ansible.builtin.file:
+      path: output
+      state: directory
+  - name: Split wordlist
+    ansible.builtin.shell: 
+      cmd: ./scripts/splitter.sh {{ wordlist }} {{ ansible_play_hosts.index(inventory_hostname) + 1 }} {{ ansible_play_hosts | length }} > input.txt
+    args:
+      executable: /bin/bash
+  - name: Run feroxbuster in the background and wait for it
+    ansible.builtin.shell: >
+      {% if ansible_play_hosts.index(inventory_hostname) + 1 == 1 %}
+      ./feroxbuster -u "{{ url }}" -o output/output-{{ inventory_hostname }}.txt -w input.txt -s 200 301 302 403 -vv --insecure --extract-links
+      {% else %}
+      ./feroxbuster -u "{{ url }}" -o output/output-{{ inventory_hostname }}.txt -w input.txt -s 200 301 302 403 -vv --insecure
+      {% endif %}
+  - name: Fetch output file
+    fetch:
+      src: output/output-{{ inventory_hostname }}.txt
+      dest: ../output/
+      flat: yes

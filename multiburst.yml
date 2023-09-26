@@ -1,0 +1,9 @@
+droplet_count: 9
+image: "ubuntu-22-04-x64"
+region: "nyc3"
+size: "s-2vcpu-2gb"
+url: "http://testphp.vulnweb.com/"
+wordlist: "/snap/seclists/current/Discovery/Web-Content/directory-list-lowercase-2.3-small.txt"
+timeout: 7
+threads: 100
+output_file: "output_merged.txt"
