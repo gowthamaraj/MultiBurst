@@ -31,8 +31,8 @@ MultiBurst is a Python-based application designed to distribute workload across 
 ## Installation
 
 1. Install Poetry: `curl -sSL https://install.python-poetry.org | bash`
-2. Clone the repository: `git clone https://github.com/username/multiburst.git`
-3. Navigate into the repository: `cd multiburst`
+2. Clone the repository: `git clone https://github.com/gowthamaraj/MultiBurst.git`
+3. Navigate into the repository: `cd MultiBurst`
 4. Install the dependencies specified in the `pyproject.toml` file: `poetry install`
 5. Enter the virtual environment: `poetry shell`
 
