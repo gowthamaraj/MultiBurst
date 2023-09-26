@@ -30,11 +30,16 @@ MultiBurst is a Python-based application designed to distribute workload across 
 
 ## Installation
 
-1. Install Poetry: `curl -sSL https://install.python-poetry.org | bash`
-2. Clone the repository: `git clone https://github.com/gowthamaraj/MultiBurst.git`
-3. Navigate into the repository: `cd MultiBurst`
-4. Install the dependencies specified in the `pyproject.toml` file: `poetry install`
-5. Enter the virtual environment: `poetry shell`
+1. Install Poetry by following the instructions provided on the official Poetry documentation: https://python-poetry.org/docs/#installing-with-the-official-installer
+2. Clone the MultiBurst repository from GitHub using the following command: `git clone https://github.com/gowthamaraj/MultiBurst.git`
+3. Navigate into the cloned repository by executing: `cd MultiBurst`
+4. Install the necessary dependencies specified in the `pyproject.toml` file by running: `poetry install`
+5. Enter the virtual environment created by Poetry using the command: `poetry shell`
+6. Create a `.env` file in the root directory of the project and add your DigitalOcean API Key in the following format:
+```ini
+DO_TOKEN=<Your_DigitalOcean_API_Key>
+```
+*Please replace `<Your_DigitalOcean_API_Key>` with your actual DigitalOcean API Key.*
 
 ## Usage
 
