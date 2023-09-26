@@ -29,9 +29,6 @@ output/
 # Ignore logs for cleaner repository
 logs/ 
 
-# Ignore wordlists to prevent accidental commit of large files
-wordlists/ 
-
 # Ignore configuration file to prevent accidental commit of sensitive data
 multiburst.yaml 
 
