@@ -41,6 +41,20 @@ DO_TOKEN=<Your_DigitalOcean_API_Key>
 ```
 *Please replace `<Your_DigitalOcean_API_Key>` with your actual DigitalOcean API Key.*
 
+### Optional Installation with requirements.txt
+
+If you prefer not to use Poetry, you can install the necessary dependencies using a `requirements.txt` file.
+
+1. Ensure you have Python 3.9 or higher installed on your system.
+2. Clone the MultiBurst repository from GitHub using the following command: `git clone https://github.com/gowthamaraj/MultiBurst.git`
+3. Navigate into the cloned repository by executing: `cd MultiBurst`
+4. Install the necessary dependencies specified in the `requirements.txt` file by running: `pip install -r requirements.txt`
+5. Create a `.env` file in the root directory of the project and add your DigitalOcean API Key in the following format:
+```ini
+DO_TOKEN=<Your_DigitalOcean_API_Key>
+```
+*Please replace `<Your_DigitalOcean_API_Key>` with your actual DigitalOcean API Key.*
+
 ## Usage
 
 Run `multiburst.py --help` for a list of available commands.
