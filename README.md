@@ -30,12 +30,13 @@ MultiBurst is a Python-based application designed to distribute workload across 
 
 ## Installation
 
-1. Install Poetry by following the instructions provided on the official Poetry documentation: https://python-poetry.org/docs/#installing-with-the-official-installer
-2. Clone the MultiBurst repository from GitHub using the following command: `git clone https://github.com/gowthamaraj/MultiBurst.git`
-3. Navigate into the cloned repository by executing: `cd MultiBurst`
-4. Install the necessary dependencies specified in the `pyproject.toml` file by running: `poetry install`
-5. Enter the virtual environment created by Poetry using the command: `poetry shell`
-6. Create a `.env` file in the root directory of the project and add your DigitalOcean API Key in the following format:
+1. Install Terraform by following the instructions provided on the official Terraform documentation: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+2. Install Poetry by following the instructions provided on the official Poetry documentation: https://python-poetry.org/docs/#installing-with-the-official-installer
+3. Clone the MultiBurst repository from GitHub using the following command: `git clone https://github.com/gowthamaraj/MultiBurst.git`
+4. Navigate into the cloned repository by executing: `cd MultiBurst`
+5. Install the necessary dependencies specified in the `pyproject.toml` file by running: `poetry install`
+6. Enter the virtual environment created by Poetry using the command: `poetry shell`
+7. Create a `.env` file in the root directory of the project and add your DigitalOcean API Key in the following format:
 ```ini
 DO_TOKEN=<Your_DigitalOcean_API_Key>
 ```
@@ -45,11 +46,12 @@ DO_TOKEN=<Your_DigitalOcean_API_Key>
 
 If you prefer not to use Poetry, you can install the necessary dependencies using a `requirements.txt` file.
 
-1. Ensure you have Python 3.9 or higher installed on your system.
-2. Clone the MultiBurst repository from GitHub using the following command: `git clone https://github.com/gowthamaraj/MultiBurst.git`
-3. Navigate into the cloned repository by executing: `cd MultiBurst`
-4. Install the necessary dependencies specified in the `requirements.txt` file by running: `pip install -r requirements.txt`
-5. Create a `.env` file in the root directory of the project and add your DigitalOcean API Key in the following format:
+1. Install Terraform by following the instructions provided on the official Terraform documentation: https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli
+2. Ensure you have Python 3.9 or higher installed on your system.
+3. Clone the MultiBurst repository from GitHub using the following command: `git clone https://github.com/gowthamaraj/MultiBurst.git`
+4. Navigate into the cloned repository by executing: `cd MultiBurst`
+5. Install the necessary dependencies specified in the `requirements.txt` file by running: `pip install -r requirements.txt`
+6. Create a `.env` file in the root directory of the project and add your DigitalOcean API Key in the following format:
 ```ini
 DO_TOKEN=<Your_DigitalOcean_API_Key>
 ```
