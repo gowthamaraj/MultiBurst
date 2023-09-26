@@ -41,6 +41,10 @@ def merge_files(directory, output_file):
 def generate_ssh_key(key_path):
     """Generate an SSH key pair at the specified path."""
     logger.info('Generating SSH key at path: %s', key_path)
+    
+    # Create the directory for key_path if it does not exist
+    os.makedirs(os.path.dirname(key_path), exist_ok=True)
+    
     if not os.path.exists(key_path):
         subprocess.run(["ssh-keygen", "-t", "rsa", "-b", "4096", "-C", "multiburst@fuffsec.hack", "-f", key_path, "-N", ""], check=True)
         os.chmod(key_path, stat.S_IRUSR | stat.S_IWUSR)
