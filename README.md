@@ -73,6 +73,7 @@ The application is controlled via the `multiburst.py` script. It accepts the fol
 The application can be configured via the `multiburst.yml` file. Here you can specify the number of droplets, the image, region, size, URL, wordlist, timeout, threads, and output file.
 
 ## Test Results
+*Please note that these tests were run only once and may not be consistent. However, they provide a general idea of the performance.*
 
 Here are the timing results for single and multi instance:
 
@@ -92,7 +93,9 @@ output_file: "output_merged.txt"
 Instance Type | Time Taken |
 --------------|------------|
 Single Instance (1 droplet)| 245.02327609062195 seconds |
-Multi Instance (9 droplet)| 40.62388014793396 |
+Multi Instance (9 droplet)| 40.62388014793396 seconds |
+
+*Please note that these tests were run only once and may not be consistent. However, they provide a general idea of the performance.*
 
 ## To-Do
 
