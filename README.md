@@ -91,8 +91,8 @@ Here are some potential enhancements for the future:
 
 ## Acknowledgments
 
-* [Attack Range](https://github.com/splunk/attack_range) (For providing inspiration for this project.)
-* [Feroxbuster] (https://github.com/epi052/feroxbuster)
+* [Attack Range](https://github.com/splunk/attack_range) - For providing inspiration for this project.
+* [Feroxbuster](https://github.com/epi052/feroxbuster)
 
 ## License
 
